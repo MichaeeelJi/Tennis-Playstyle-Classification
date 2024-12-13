@@ -21,7 +21,7 @@ The core of this project involves using GMM to cluster players based on their pl
 
 ## Getting Started
 
-1. **Clone the repository:** `git clone <repository_url>`
+1. **Clone the repository** 
 2. **Install dependencies:** Ensure you have the necessary Python libraries installed.
 3. **Run the code:** Execute the main script to perform the clustering and analysis.
 4. **Explore the results:** Examine the output files and visualizations to understand the play style classifications.
@@ -41,7 +41,7 @@ The project utilizes a dataset containing detailed match statistics of ATP playe
 
 ## Results
 
-The results of the GMM clustering provide insights into the different playing styles present in professional tennis. The project identifies and characterizes four distinct play styles:
+The results of the GMM clustering provide insights into the different playing styles present in professional tennis. The project categorizes players into four distinct play styles:
 
 * **Counter Puncher:** Players who excel at retrieving and extending rallies.
 * **Attacking Baseliner:** Players who rely on powerful groundstrokes.
@@ -97,13 +97,6 @@ A Random Forest Regressor is used for this prediction task. The model is trained
 
 The model performance is evaluated using Mean Squared Error (MSE) and R-squared (R²) score. Cross-validation techniques, including k-fold cross-validation and leave-one-out cross-validation, are employed to ensure the model's generalizability.
 
-## Usage
-
-To use the model:
-
-1. Load the trained model using `joblib.load()`.
-2. Provide the input features for a new player.
-3. Use the `predict()` method to get the predicted play style probabilities.
 
 
 ## Dependencies
@@ -135,14 +128,6 @@ This project analyzes tennis match data to construct methods to calculate variou
 Use code with caution
 bash pip install pandas numpy matplotlib plotly joblib scikit-learn
 
- 
-## Usage
-
-1. Open the Colab notebook.
-2. Mount your Google Drive.
-3. Upload your tennis match data as a CSV file to your Google Drive. Update the `csv_path` variable in the notebook to point to your data file.
-4. Run the cells in the notebook in order.
-5. The notebook will calculate shot quality metrics for two players (defined by `player_1` and `player_2`) and predict their playing styles.
 
 ## Data
 

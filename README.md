@@ -49,7 +49,7 @@ The results of the GMM clustering provide insights into the different playing st
 * **All-Court Player:** Players with versatile skills and tactical flexibility.
 * **Solid Baseliner:** Players who maintain consistent and balanced gameplay.
 
-## Future Work
+## Future Work (Tentative) 
 
 * **Model refinement:** Exploring different clustering algorithms and feature engineering techniques to improve the accuracy and interpretability of the play style classifications.
 * **Dynamic analysis:** Analyzing player performance over time to identify trends and changes in play styles.

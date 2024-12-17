@@ -29,8 +29,9 @@ The core of this project involves using GMM to cluster players based on their pl
 ## Dataset
 
 The project utilizes a dataset containing detailed match statistics of ATP players. This dataset is included in the repository.
+**feature columns:** firstServeIn_per	secondServeIn_per	ace_per	first_serve_won_per	second_serve_won_per	forehand_winner_per	backhand_winner_per	forehand_unforced_error_per	backhand_unforced_error_per	net_per	net_point_direct_win_per	net_point_winning_per	net_point_error	passing_per	net_point_winByError_per	winner_per	err_per	pts_won_Ite_3_shots_per	shots_in_pts_won_per	shots_in_pts_lost_per	shots_in_won_vs_lost_ratio	inside_in_per	inside_out_per
 
-## categorization
+## Categorization
 
 **the playstyle categories are:** counter puncher, attacking baseliner, solid baseliner, and all-court player. (the GMM category names were initially unknown and need to be manually labeled)
 1. Select the top 10 players with the highest score from each category.
@@ -64,25 +65,8 @@ The goal of this project is to develop a regression model that can accurately cl
 
 ## Dataset
 
-The dataset used for this project contains shot-level statistics for tennis players, including features such as:
+The dataset used for this project contains shot-level statistics for tennis players, including features the same as the dataset for GMM but includes the **four defined playstyles:** 
 
-* `forehand_winner_per`: Percentage of forehand winners.
-* `backhand_winner_per`: Percentage of backhand winners.
-* `net_per`: Percentage of points played at the net.
-* `net_point_direct_win_per`: Percentage of net points won directly.
-* `net_point_winning_per`: Percentage of net points won.
-* `net_point_error`: Number of errors made at the net.
-* `passing_per`: Percentage of passing shots.
-* `winner_per`: Percentage of winners.
-* `err_per`: Percentage of errors.
-* `pts_won_Ite_3_shots_per`: Percentage of points won in less than or equal to 3 shots.
-* `shots_in_pts_won_per`: Percentage of shots in points won.
-* `shots_in_pts_lost_per`: Percentage of shots in points lost.
-* `shots_in_won_vs_lost_ratio`: Ratio of shots in points won to shots in points lost.
-* `inside_in_per`: Percentage of inside-in shots.
-* `inside_out_per`: Percentage of inside-out shots.
-
-The target variables are the player styles:
 
 * `Counter Puncher`
 * `Attacking Baseliner`
@@ -133,7 +117,7 @@ bash pip install pandas numpy matplotlib plotly joblib scikit-learn
 
 The project uses a CSV file containing detailed information about each shot in a tennis match. 
 
-* **Important features:** The key features used for analysis include 'serverName', 'shotInRally', 'isWinner', 'isError', 'shotFhBh', 'isVolley', 'isApproach', 'isOverhead', 'firstServeIn', 'secondServeIn', 'isAce', 'shotDirection', 'side', etc.
+* **Important features:** The key features used for analysis include pointScore	gameScore	setScore	isPointStart	pointStartTime	isPointEnd	pointEndTime	pointNumber	isBreakPoint	shotInRally	side	serverName	serverFarNear	firstServeIn	firstServeZone	firstServeXCoord	firstServeYCoord	secondServeIn	secondServeZone	secondServeXCoord	secondServeYCoord	isAce	shotContactX	shotContactY	shotDirection	shotFhBh (or ShotType in the old version)	isSlice	isVolley	isOverhead	isApproach	isDropshot	isExcitingPoint	atNetPlayer1	atNetPlayer2	isLob	shotLocationX	shotLocationY	isWinner	isErrorWideR	isErrorWideL	isErrorNet	isErrorLong	clientTeam	Date	Division	Event	lineupPosition	matchDetails	matchVenue	opponentTeam	player1Name	player2Name	player1Hand	player2Hand	Round	Surface	Notes	tiebreakScore	returnerName	shotHitBy	isInsideOut	isInsideIn	isDoubleFault	pointWonBy	lastShotError	serveResult	serveInPlacement	depth
 
 
 ## Models
